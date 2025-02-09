@@ -1,0 +1,24 @@
+media:
+  input: src/assets/images
+  output: /
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: src/contents/posts
+    view:
+      fields: [ title, published ]
+      primary: title
+      sort: [ pubDate, title ]
+      default:
+        sort: pubDate
+        order: asc
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: string, options: { maxlength: 180 }}
+      - { name: image, label: Image, type: image, required: false }
+      - { name: category, label: Category, type: string, required: true }
+      - { name: tags, label: Tags, type: string, required: false, list: true }
+      - { name: published, label: published, type: date }
+      - { name: updated, label: updated, type: date }
+      - { name: content, label: Body, type: rich-text }
