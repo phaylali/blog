@@ -2,7 +2,7 @@
 title: Omniversify Blog Official Launch
 description: Omniversify, game development, creative projects, in-development
   game, progress blog.
-image: /src/assets/images/OMNIVERSIFY.webp
+image: ../../assets/images/OMNIVERSIFY.webp
 category: News
 tags:
   - Blogging
