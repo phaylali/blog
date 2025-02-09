@@ -21,7 +21,7 @@ pnpm-debug.log*
 .DS_Store
 
 .vercel
-.vscode
+.vscode/
 package-lock.json
 bun.lockb
 yarn.lock
