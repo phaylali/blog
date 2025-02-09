@@ -5,13 +5,13 @@ content:
   - name: posts
     label: Posts
     type: collection
-    path: src/contents/posts
+    path: src/content/posts
     view:
       fields: [ title, published ]
       primary: title
-      sort: [ pubDate, title ]
+      sort: [ published, title ]
       default:
-        sort: pubDate
+        sort: published
         order: asc
     fields:
       - { name: title, label: Title, type: string, required: true }
