@@ -1,0 +1,68 @@
+---
+import SocialIcon from "./SocialIcon.astro";
+import SocialCopy from "./SocialIconCopy.astro";
+interface Props {
+  url: string;
+  title: string;
+}
+
+const { url, title } = Astro.props;
+
+const shareLinks = [
+  {
+    platform: "Facebook",
+    icon: "mingcute:facebook-line",
+    url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+  },
+  {
+    platform: "Twitter",
+    icon: "mingcute:twitter-line",
+    url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`,
+  },
+  {
+    platform: "LinkedIn",
+    icon: "mingcute:linkedin-line",
+    url: `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
+  },
+  {
+    platform: "WhatsApp",
+    icon: "mingcute:whatsapp-line",
+    url: `https://wa.me/?text=${encodeURIComponent(title + " " + url)}`,
+  },
+  {
+    platform: "Telegram",
+    icon: "mingcute:telegram-line",
+    url: `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
+  },
+  {
+    platform: "Reddit",
+    icon: "mingcute:reddit-line",
+    url: `https://reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
+  },
+  {
+    platform: "Email",
+    icon: "mingcute:mail-line",
+    url: `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(url)}`,
+  },
+  {
+    platform: "Copy Link",
+    icon: "mingcute:copy-line",
+    url: "#",
+    action: "copy",
+  },
+];
+---
+
+<div class="share-buttons flex flex-row">
+  {
+    shareLinks.map(({ platform, icon, url, action }) =>
+      action === "copy" ? (
+        
+          <SocialCopy name={icon} />
+        
+      ) : (
+        <SocialIcon name={icon} link={url} />
+      ),
+    )
+  }
+</div>

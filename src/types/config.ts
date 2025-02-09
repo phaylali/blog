@@ -37,7 +37,7 @@ export type Favicon = {
 export enum LinkPreset {
   Home = 0,
   Archive = 1,
-  About = 2,
+  
 }
 
 export type NavBarLink = {
@@ -60,13 +60,6 @@ export type ProfileConfig = {
     icon: string
   }[]
 }
-
-export type LicenseConfig = {
-  enable: boolean
-  name: string
-  url: string
-}
-
 export type LIGHT_DARK_MODE =
   | typeof LIGHT_MODE
   | typeof DARK_MODE

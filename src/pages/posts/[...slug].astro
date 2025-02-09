@@ -1,18 +1,18 @@
 ---
 import path from 'node:path'
 import { getCollection } from 'astro:content'
-import License from '@components/misc/License.astro'
 import Markdown from '@components/misc/Markdown.astro'
 import I18nKey from '@i18n/i18nKey'
 import { i18n } from '@i18n/translation'
 import MainGridLayout from '@layouts/MainGridLayout.astro'
 import { getDir, getPostUrlBySlug } from '@utils/url-utils'
 import { Icon } from 'astro-icon/components'
-import { licenseConfig } from 'src/config'
+
 import PostMetadata from '../../components/PostMeta.astro'
 import ImageWrapper from '../../components/misc/ImageWrapper.astro'
 import { profileConfig, siteConfig } from '../../config'
 import { formatDateToYYYYMMDD } from '../../utils/date-utils'
+import ShareButtons from '@components/widget/ShareButtons.astro'
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('posts', ({ data }) => {
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
     props: { entry },
   }))
 }
-
+const currentUrl = Astro.url.href;
 const { entry } = Astro.props
 const { Content, headings } = await entry.render()
 
@@ -92,7 +92,7 @@ const jsonLd = {
                 ></PostMetadata>
                 {!entry.data.image && <div class="border-[var(--line-divider)] border-dashed border-b-[1px] mb-5"></div>}
             </div>
-
+            <ShareButtons url={currentUrl} title={entry.data.title} />
             <!-- always show cover as long as it has one -->
 
             {entry.data.image &&
@@ -104,8 +104,7 @@ const jsonLd = {
                 <Content />
             </Markdown>
 
-            {licenseConfig.enable && <License title={entry.data.title} slug={entry.slug} pubDate={entry.data.published} class="mb-6 rounded-xl license-container onload-animation"></License>}
-
+         
         </div>
     </div>
 
