@@ -21,4 +21,4 @@ content:
       - { name: tags, label: Tags, type: string, required: false, list: true }
       - { name: published, label: published, type: date }
       - { name: updated, label: updated, type: date }
-      - { name: content, label: Body, type: rich-text }
+      - { name: body, label: Body, type: rich-text }
