@@ -11,42 +11,42 @@ const { url, title } = Astro.props;
 const shareLinks = [
   {
     platform: "Facebook",
-    icon: "mingcute:facebook-line",
+    icon: "tabler:brand-facebook",
     url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
   },
   {
     platform: "Twitter",
-    icon: "mingcute:twitter-line",
+    icon: "tabler:brand-twitter",
     url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`,
   },
   {
     platform: "LinkedIn",
-    icon: "mingcute:linkedin-line",
+    icon: "tabler:brand-linkedin",
     url: `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
   },
   {
     platform: "WhatsApp",
-    icon: "mingcute:whatsapp-line",
+    icon: "tabler:brand-whatsapp",
     url: `https://wa.me/?text=${encodeURIComponent(title + " " + url)}`,
   },
   {
     platform: "Telegram",
-    icon: "mingcute:telegram-line",
+    icon: "tabler:brand-telegram",
     url: `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
   },
   {
     platform: "Reddit",
-    icon: "mingcute:reddit-line",
+    icon: "tabler:brand-reddit",
     url: `https://reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
   },
   {
     platform: "Email",
-    icon: "mingcute:mail-line",
+    icon: "tabler:mail",
     url: `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(url)}`,
   },
   {
     platform: "Copy Link",
-    icon: "mingcute:copy-line",
+    icon: "tabler:copy",
     url: "#",
     action: "copy",
   },
@@ -57,9 +57,7 @@ const shareLinks = [
   {
     shareLinks.map(({ platform, icon, url, action }) =>
       action === "copy" ? (
-        
-          <SocialCopy name={icon} />
-        
+        <SocialCopy name={icon} />
       ) : (
         <SocialIcon name={icon} link={url} />
       ),

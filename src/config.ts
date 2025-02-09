@@ -40,7 +40,7 @@ export const navBarConfig: NavBarConfig = {
   links: [
     LinkPreset.Home,
     LinkPreset.Archive,
-    
+
     {
       name: 'GitHub',
       url: 'https://github.com/phaylali/blog',     // Internal links should not include the base path, as it is automatically added
@@ -50,28 +50,60 @@ export const navBarConfig: NavBarConfig = {
 }
 
 export const profileConfig: ProfileConfig = {
-  avatar: 'assets/images/favicon.svg',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+  avatar: 'assets/images/favicon.svg',
   name: 'Phaylali',
   bio: 'Founder of Omniversify',
   links: [
     {
       name: 'Twitter',
-      icon: 'fa6-brands:twitter',       // Visit https://icones.js.org/ for icon codes
-                                        // You will need to install the corresponding icon set if it's not already included
-                                        // `pnpm add @iconify-json/<icon-set-name>`
+      icon: 'tabler:brand-twitter',
       url: 'https://twitter.com/phaylali',
     },
     {
+      name: 'Twitch',
+      icon: 'tabler:brand-twitch',
+      url: 'https://twitch.tv/phaylali',
+    },
+    {
+      name: 'YouTube',
+      icon: 'tabler:brand-youtube',
+      url: 'https://youtube.com/@phaylali',
+    },
+    {
+      name: 'Discord',
+      icon: 'tabler:brand-discord',
+      url: 'https://omniversify.discord.gg/',
+    },
+    {
       name: 'Steam',
-      icon: 'fa6-brands:steam',
+      icon: 'tabler:brand-steam',
       url: 'https://steamcommunity.com/id/phaylali/',
     },
     {
       name: 'GitHub',
-      icon: 'fa6-brands:github',
+      icon: 'tabler:brand-github',
       url: 'https://github.com/phaylali',
+    },
+    {
+      name: 'TikTok',
+      icon: 'tabler:brand-tiktok',
+      url: 'https://tiktok.com/@phaylali',
+    },
+    {
+      name: 'Facebook',
+      icon: 'tabler:brand-facebook',
+      url: 'https://facebook.com/phaylali',
+    },
+    {
+      name: 'Instagram',
+      icon: 'tabler:brand-instagram',
+      url: 'https://instagram.com/phaylali',
+    },
+    {
+      name: 'Kick',
+      icon: 'tabler:brand-kick',
+      url: 'https://kick.com/phaylali',
     },
   ],
 }
-
 
