@@ -30,8 +30,7 @@ export type SiteConfig = {
 
 export type Favicon = {
   src: string
-  theme?: 'light' | 'dark'
-  sizes?: string
+  
 }
 
 export enum LinkPreset {
