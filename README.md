@@ -55,7 +55,7 @@ Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4
 
 ## 🙏 Special Thanks
 
-- [WhitePaper233](https://github.com/WhitePaper233/yukina) for providing the base template
+-  [saica.go]((https://github.com/saicaca/fuwari)) for providing the base template
 
 
 ---
