@@ -4,45 +4,53 @@ import SocialCopy from "./SocialIconCopy.astro";
 interface Props {
   url: string;
   title: string;
+  description: string;
+  image: string;
 }
 
-const { url, title } = Astro.props;
+const { url, title, description, image } = Astro.props;
+
+const encodedTitle = encodeURIComponent(title);
+const encodedDescription = encodeURIComponent(description);
+const encodedUrl = encodeURIComponent(url);
+const encodedImage = encodeURIComponent(image);
 
 const shareLinks = [
   {
     platform: "Facebook",
     icon: "tabler:brand-facebook",
-    url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+    url: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+    // Facebook doesn't reliably use description/image from URL, so relying on meta tags
   },
   {
     platform: "Twitter",
     icon: "tabler:brand-twitter",
-    url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`,
+    url: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}&description=${encodedDescription}`,
   },
   {
     platform: "LinkedIn",
     icon: "tabler:brand-linkedin",
-    url: `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
+    url: `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}&summary=${encodedDescription}&source=Omniversify`,
   },
   {
     platform: "WhatsApp",
     icon: "tabler:brand-whatsapp",
-    url: `https://wa.me/?text=${encodeURIComponent(title + " " + url)}`,
+    url: `https://wa.me/?text=${encodedTitle + " " + encodedUrl + " - " + encodedDescription}`,
   },
   {
     platform: "Telegram",
     icon: "tabler:brand-telegram",
-    url: `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
+    url: `https://t.me/share/url?url=${encodedUrl}&text=${encodedTitle + " - " + encodedDescription}`,
   },
   {
     platform: "Reddit",
     icon: "tabler:brand-reddit",
-    url: `https://reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
+    url: `https://reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`,
   },
   {
     platform: "Email",
     icon: "tabler:mail",
-    url: `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(url)}`,
+    url: `mailto:?subject=${encodedTitle}&body=${encodedDescription}%0A%0A${encodedUrl}`,
   },
   {
     platform: "Copy Link",

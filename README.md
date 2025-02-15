@@ -20,7 +20,7 @@ Omniversify Blog serves as a historical record and progress tracker for:
 - 🌓 Elegant dark/light mode
 - 🔍 Smart search functionality
 - 📱 Mobile-first responsive design
-- 🌐 Multi-language support (English & Chinese)
+- 🌐 Multi-language support (English, Arabic & Tifinagh Tamazight)
 - 🏷️ Organized tags and categories
 - 📊 Beautiful archive system
 - 🔗 Enhanced social sharing
