@@ -8,7 +8,7 @@ category: Announcement
 tags:
   - Blogging
 published: 2025-02-15
-updated: 2025-02-15
+updated: 2025-02-20
 ---
 ## **Introduction: A Call to Moroccan Dreamers, Creators, and Storytellers**
 
@@ -124,7 +124,7 @@ Join Omniversify. Let’s build games where Aicha Qandicha’s legacy is just th
 
 ### **Connect With Us**:
 
-Join our [Discord](https://discord.omniverisfy.com/)
+Join our [Discord](https://discord.omniversify.com/)
 
 _Omniversify – Where the Forgotten Become Immortal._
 
