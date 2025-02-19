@@ -25,10 +25,11 @@ export default defineConfig({
   base: "/",
   trailingSlash: "always",
   integrations: [
+
     tailwind(
-        {
-          nesting: true,
-        }
+      {
+        nesting: true,
+      }
     ),
     swup({
       theme: false,
