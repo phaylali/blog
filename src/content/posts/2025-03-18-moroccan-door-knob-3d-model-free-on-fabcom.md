@@ -3,7 +3,7 @@ title: Modern Moroccan Door Knob 3D Model FREE on FAB.com
 description: A detailed 3D model of a modern Moroccan door knob, blending
   traditional patterns with contemporary design. Created with Megascans
   materials and Blender.
-image: ../../assets/images/Screenshot 2025-03-18 035513.png
+image: ../../assets/images/Screenshot 2025-03-18 035354.png
 category: Assets
 tags:
   - 3d model
